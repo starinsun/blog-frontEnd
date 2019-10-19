@@ -1,5 +1,5 @@
 import React from 'react'
-import '../static/components/Header.css'
+import '../static/components/header.css'
 import { Row, Col, Menu, Icon } from 'antd'
 
 const Header = () => {
@@ -17,7 +17,7 @@ const Header = () => {
               Home
             </Menu.Item>
 
-            <Menu.Item key='home'>
+            <Menu.Item key='smile'>
               <Icon type="smile"/>
               Login
             </Menu.Item>
