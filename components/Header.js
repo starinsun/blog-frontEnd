@@ -1,10 +1,7 @@
 import React from 'react'
 import '../static/components/header.css'
 import { Row, Col, Menu, Icon } from 'antd'
-
-const IconFont = Icon.createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_1362423_v3y7ufqzfi.js'
-});
+import {IconFont} from '../pages/index'
 
 const {SubMenu} = Menu
 
@@ -23,23 +20,10 @@ const Header = () => {
               SEARCH
             </Menu.Item>
 
-            <SubMenu 
-              title={
-                <span className="submenu-code">
-                  <IconFont type="icon-github"/>
-                  CODE
-                </span>
-              }
-            >
-              <Menu.ItemGroup title="前端">
-                <Menu.Item key="setting:1">React</Menu.Item>
-                <Menu.Item key="setting:2">Vue</Menu.Item>
-              </Menu.ItemGroup>
-              <Menu.ItemGroup title="后端">
-                <Menu.Item key="setting:3">Nest.js</Menu.Item>
-                <Menu.Item key="setting:4">Flask</Menu.Item>
-              </Menu.ItemGroup>
-            </SubMenu>
+            <Menu.Item key='code'>
+              <IconFont type="icon-github"/>
+              CODE
+            </Menu.Item>
 
             <Menu.Item key='ins'>
               <IconFont type="icon-ins"/>

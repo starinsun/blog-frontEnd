@@ -1,0 +1,49 @@
+.post-center {
+  background-color: #fff;
+  margin: 1.2rem 1.8rem;
+  padding: .8rem;
+  border-radius: .3rem;
+  border:.1rem solid #eee;
+}
+
+.post-titles {
+  padding: 0 1rem;
+}
+
+.post-title {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Fira Code", STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑";
+  /* text-shadow: 0px 3px 3px #aaa; */
+}
+
+.post-intro {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.post-date {
+  margin: .5rem 0;
+}
+
+.post-tag .ant-tag {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  margin-left: 1.5rem;
+}
+
+.icon {
+  font-size: 1.6rem;
+  margin-left: 3rem;
+}
+
+img {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.post-contents {
+  font-size: 600;
+}

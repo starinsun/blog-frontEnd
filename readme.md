@@ -12,3 +12,5 @@
 11. icon-weixin
 12. icon-github
 13. icon-ins
+14. icon-bixin
+15. icon-wo-

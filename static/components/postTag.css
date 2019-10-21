@@ -1,0 +1,9 @@
+.main {
+  text-align: center;
+  margin-top: 1.3rem;
+}
+
+.guzhang, .pinglun, .csdn, .github, .juejin {
+  margin-top: 1rem;
+  font-size: 2rem;
+}

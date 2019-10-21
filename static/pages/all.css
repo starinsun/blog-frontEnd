@@ -2,27 +2,14 @@ body{
   background-color: #f6f6f6;  
 }
 
-.all-left{
-  background-color: #FFF;
-  padding:.3rem;
-  border-radius: .3rem;
-  border-bottom:1px solid #eee;
-}
 .all-center{
   background-color: #fff;
-  margin-left: .7rem;
-  padding: .3rem;
+  margin: 1.2rem 1.8rem;
+  padding: .8rem;
   border-radius: .3rem;
-  border-bottom: 1px solid #eee;
+  border:.1rem solid #000;
 }
-.all-right{
-  background-color: #FFF;
-  margin-left: .7rem;
-  padding:.3rem;
-  border-radius: .3rem;
-  border-bottom:1px solid #eee;
 
-}
 .all-main{
   margin-top: .5rem;
 }

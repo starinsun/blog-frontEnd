@@ -1,0 +1,20 @@
+.block {
+  text-align: center;
+  margin-top: 1.4rem;
+  text-shadow: 0px 2px 3px #bbb;
+}
+
+.react, .vue, .nest, .angular {
+  padding-bottom: 1rem;
+}
+
+.ant-tag {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-right: 0;
+}
+
+.daohang {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
