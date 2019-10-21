@@ -1,7 +1,6 @@
 .block {
   text-align: center;
   margin-top: 1.4rem;
-  text-shadow: 0px 2px 3px #bbb;
 }
 
 .react, .vue, .nest, .angular {
@@ -9,8 +8,8 @@
 }
 
 .ant-tag {
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
   margin-right: 0;
 }
 

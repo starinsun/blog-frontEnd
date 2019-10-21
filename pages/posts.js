@@ -5,6 +5,8 @@ import { Row, Col, Affix } from 'antd'
 import PostTag from '../components/PostTag'
 import '../static/components/post.css'
 import Post from '../components/Post'
+import Introduction from '../components/Introduction'
+import PostNavBar from '../components/PostNavBar'
 
 const Posts = () => (
   <div>
@@ -26,7 +28,12 @@ const Posts = () => (
         <Post />
       </Col>
       
-      <Col className='post--right' xs={0} sm={0} md={5} lg={4} xl={5}>右边</Col>
+      <Col className='post--right' xs={0} sm={0} md={5} lg={4} xl={5}>
+        <Introduction />
+        <Affix offsetTop={60}>
+          <PostNavBar />
+        </Affix>
+      </Col>
     </Row>
   </div>
 )

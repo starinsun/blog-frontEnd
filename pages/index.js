@@ -10,7 +10,7 @@ import MyTag from '../components/Tag'
 import '../static/pages/all.css'
 
 export const IconFont = Icon.createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_1362423_nfl2szn6yqa.js'
+  scriptUrl: '//at.alicdn.com/t/font_1362423_thoo4y4gzfc.js'
 });
 
 const Home = () => {
