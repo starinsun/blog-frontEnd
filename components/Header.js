@@ -2,6 +2,7 @@ import React from 'react'
 import '../static/components/header.css'
 import { Row, Col, Menu, Icon } from 'antd'
 import {IconFont} from '../pages/index'
+import Link from 'next/link'
 
 const {SubMenu} = Menu
 
@@ -10,7 +11,13 @@ const Header = () => {
     <div className='header'>
       <Row type='flex' justify='center'>
         <Col xs={24} sm={24} md={10} lg={10} xl={10}>
-          <span className='headerLogo'>BLOG</span>
+          <span className='headerLogo'>
+            <Link href='/'>
+              <a>
+                BLOG
+              </a>
+            </Link>
+          </span>
           <span className='headertxt'>ESWang</span>
         </Col>
         <Col xs={0} sm={0} md={14} lg={8} xl={6}>

@@ -3,14 +3,16 @@
   margin-top: 1.4rem;
 }
 
-.react, .vue, .nest, .angular {
+.react, .vue, .nest, .angular, .life {
   padding-bottom: 1rem;
 }
 
 .ant-tag {
   font-size: 1.3rem;
-  line-height: 1.8rem;
+  font-weight: 600;
+  line-height: 1.9rem;
   margin-right: 0;
+  margin-bottom: .3rem;
 }
 
 .daohang {

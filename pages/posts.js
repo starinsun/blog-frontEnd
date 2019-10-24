@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {createContext} from 'react'
 import Head from 'next/head'
 import Header from '../components/Header'
 import { Row, Col, Affix } from 'antd'
@@ -7,8 +7,11 @@ import '../static/components/post.css'
 import Post from '../components/Post'
 import Introduction from '../components/Introduction'
 import PostNavBar from '../components/PostNavBar'
+import axios from 'axios'
 
-const Posts = () => (
+export const PostContext = createContext()
+
+const Posts = (res) => (
   <div>
     <Head>
       <title>POSTS</title>
@@ -25,17 +28,26 @@ const Posts = () => (
       </Col>
 
       <Col className='post-center' xs={24} sm={24} md={12} lg={13} xl={13} >
-        <Post />
+        <PostContext.Provider value = {res}>
+          <Post />
+        </PostContext.Provider>
       </Col>
-      
+
       <Col className='post--right' xs={0} sm={0} md={5} lg={4} xl={5}>
         <Introduction />
         <Affix offsetTop={60}>
-          <PostNavBar />
+          <PostContext.Provider value = {res}>
+            <PostNavBar />
+          </PostContext.Provider>
         </Affix>
       </Col>
     </Row>
   </div>
 )
+
+Posts.getInitialProps = async ( ctx ) => {
+  const res = await axios.get(`http://localhost:4000/posts/${ctx.query.id}`)
+  return res.data
+}
 
 export default Posts

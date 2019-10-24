@@ -18,6 +18,9 @@ const MyTag = () => (
     <div className='angular'>
       <Tag color='magenta'>Angular</Tag>
     </div>
+    <div className='life'>
+      <Tag color='silver'>Life</Tag>
+    </div>
   </div>
 )
 
