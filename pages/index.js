@@ -1,3 +1,9 @@
+/*
+ * @Date: 2019-10-18 15:41:11
+ * @LastEditors: Asen Wang
+ * @LastEditTime: 2019-10-30 00:26:22
+ * @content: I
+ */
 import React, {useState, useEffect, createContext} from 'react'
 import Head from 'next/head'
 import { Row, Col, Affix, Icon } from 'antd'
@@ -7,17 +13,21 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import PostList from '../components/PostList'
 import Introduction from '../components/Introduction'
+import HeadTag from '../components/HeadTag'
 import MyTag from '../components/Tag'
+
+import {inconf_url, api_url} from '../utils/config'
 
 import '../static/pages/all.css'
 
 export const IconFont = Icon.createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_1362423_31zuccekimc.js'
+  scriptUrl: inconf_url
 });
 
-export const PostsContext = createContext()
+export const PostsContext = createContext({})
+export const TagContext = createContext('')
 
-const Home = ({data}) => {
+const Home = ({data,ctx}) => {
   
   return (
     <div>
@@ -28,6 +38,14 @@ const Home = ({data}) => {
       <Affix>
         <Header/>
       </Affix>
+      {ctx 
+        ? 
+          <TagContext.Provider value={ctx}>
+            <HeadTag />
+          </TagContext.Provider>
+        : <div></div>
+      }
+      
       <Row className='all-main' type='flex' justify='center'>
         <Col className='left' xs={0} sm={0} md={2} lg={2.5} xl={2.5}>
           <Affix offsetTop={60}><MyTag /></Affix>
@@ -45,9 +63,13 @@ const Home = ({data}) => {
     </div>
 )}
 
-Home.getInitialProps = async() => {
-  const res = await axios.get('http://localhost:4000/posts')
-  return { data: res.data }
+Home.getInitialProps = async(ctx) => {
+  const res = ctx.query.tags ?
+    await axios.get(api_url + `/list/${ctx.query.tags}`) :
+    await axios.get(api_url)
+  console.log({ data: res.data, ctx: ctx.query.tags });
+  
+  return { data: res.data, ctx: ctx.query.tags }
 }
 
 export default Home

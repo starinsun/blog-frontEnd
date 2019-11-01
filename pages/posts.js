@@ -9,6 +9,8 @@ import Introduction from '../components/Introduction'
 import PostNavBar from '../components/PostNavBar'
 import axios from 'axios'
 
+import {api_url} from '../utils/config'
+
 export const PostContext = createContext()
 
 const Posts = (res) => (
@@ -46,7 +48,8 @@ const Posts = (res) => (
 )
 
 Posts.getInitialProps = async ( ctx ) => {
-  const res = await axios.get(`http://localhost:4000/posts/${ctx.query.id}`)
+  const res = await axios.get(api_url + `/post/${ctx.query.id}`) 
+  
   return res.data
 }
 

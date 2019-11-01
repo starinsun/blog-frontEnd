@@ -3,6 +3,7 @@ import '../static/components/header.css'
 import { Row, Col, Menu, Icon } from 'antd'
 import {IconFont} from '../pages/index'
 import Link from 'next/link'
+import Router from 'next/router'
 
 const {SubMenu} = Menu
 
@@ -27,12 +28,12 @@ const Header = () => {
               SEARCH
             </Menu.Item>
 
-            <Menu.Item key='code'>
+            <Menu.Item key='code' onClick={() => Router.push('/')}>
               <IconFont type="icon-github"/>
               CODE
             </Menu.Item>
 
-            <Menu.Item key='ins'>
+            <Menu.Item key='ins' onClick={() => Router.push('/life')}>
               <IconFont type="icon-ins"/>
               LIFE
             </Menu.Item>

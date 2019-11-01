@@ -30,8 +30,9 @@ const PostList = () => {
             <IconText type="icon-wo-" text={item.comment} key="list-vertical-wo-" />
           ]}
           extra={
-            <img alt='无所谓' src={item.img} onClick={() => {Router.push({pathname: '/posts',query:{id: item._id} })}} />
+            <img alt='无所谓' src={item.img} />
           }
+          onClick={() => {Router.push({pathname: '/posts',query:{id: item._id} })}} 
         >
 
           <List.Item.Meta

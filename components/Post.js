@@ -3,10 +3,11 @@ import { IconFont } from "../pages"
 import Markdown from 'react-markdown'
 import { PostContext } from '../pages/posts'
 import React, {useContext} from 'react';
+import { judge_tag_color } from '../utils/tagColor'
+import '../static/components/post.css'
 
 const Post = () => {
   const markdown= useContext(PostContext)
-  console.log(markdown);
 
   return (
     <>
@@ -20,8 +21,9 @@ const Post = () => {
           <span className='post-time'>{ markdown.time+'  |  '+markdown.readtime+'min可读完' }</span>
           <span className='post-tag'>
             <IconFont type='icon-biaoqiansuoyin' className='icon' />:
-            <Tag color='green'>{markdown.tags[0]}</Tag>
-            <Tag color='volcano'>{markdown.tags[1]}</Tag>
+            {
+              markdown.tags.map(tag => <Tag color={judge_tag_color(tag)} key={tag}>{tag}</Tag>)
+            }
           </span>
         </div>
       </div>
