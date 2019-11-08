@@ -1,19 +1,19 @@
-body{
-  background-color: #f6f6f6;  
+body {
+  background-color: #f6f6f6;
   font-family:
-    system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,
-    Helvetica,Arial,
-    sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+    system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+    Helvetica, Arial,
+    sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
 }
 
-.all-center{
+.all-center {
   background-color: #fff;
   margin: 1.2rem 1.8rem;
   padding: .8rem;
   border-radius: .3rem;
-  border:.1rem solid #000;
+  border: .1rem solid #000;
 }
 
-.all-main{
+.all-main {
   margin-top: .5rem;
 }

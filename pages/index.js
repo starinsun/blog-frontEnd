@@ -4,31 +4,33 @@
  * @LastEditTime: 2019-10-30 00:26:22
  * @content: I
  */
-import React, {useState, useEffect, createContext} from 'react'
-import Head from 'next/head'
-import { Row, Col, Affix, Icon } from 'antd'
-import axios from 'axios'
+import React, { useState, useEffect, createContext } from 'react';
+import Head from 'next/head';
+import { Row, Col, Affix, Icon } from 'antd';
+import axios from 'axios';
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import PostList from '../components/PostList'
-import Introduction from '../components/Introduction'
-import HeadTag from '../components/HeadTag'
-import MyTag from '../components/Tag'
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import PostList from '../components/PostList';
+import Introduction from '../components/Introduction';
+import HeadTag from '../components/HeadTag';
+import MyTag from '../components/Tag';
 
-import {inconf_url, api_url} from '../utils/config'
+import { inconf_url, api_url } from '../utils/config';
 
-import '../static/pages/all.css'
+import '../static/pages/all.css';
+import '../static/components/postTag.css';
+import '../static/components/post.css';
+import '../static/components/postnavbar.css';
 
 export const IconFont = Icon.createFromIconfontCN({
   scriptUrl: inconf_url
 });
 
-export const PostsContext = createContext({})
-export const TagContext = createContext('')
+export const PostsContext = createContext({});
+export const TagContext = createContext('');
 
-const Home = ({data,ctx}) => {
-  
+const Home = ({ data, ctx }) => {
   return (
     <div>
       <Head>
@@ -36,40 +38,45 @@ const Home = ({data,ctx}) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Affix>
-        <Header/>
+        <Header />
       </Affix>
-      {ctx 
-        ? 
-          <TagContext.Provider value={ctx}>
-            <HeadTag />
-          </TagContext.Provider>
-        : <div></div>
-      }
-      
+      {ctx ? (
+        <TagContext.Provider value={ctx}>
+          <HeadTag />
+        </TagContext.Provider>
+      ) : (
+        <div></div>
+      )}
+
       <Row className='all-main' type='flex' justify='center'>
         <Col className='left' xs={0} sm={0} md={2} lg={2.5} xl={2.5}>
-          <Affix offsetTop={60}><MyTag /></Affix>
+          <Affix offsetTop={60}>
+            <MyTag />
+          </Affix>
         </Col>
-        <Col className='all-center' xs={24} sm={24} md={12} lg={13} xl={13} >
+        <Col className='all-center' xs={24} sm={24} md={12} lg={13} xl={13}>
           <PostsContext.Provider value={data}>
             <PostList />
           </PostsContext.Provider>
         </Col>
         <Col xs={0} sm={0} md={5} lg={4} xl={5} className='right'>
-          <Affix offsetTop={60}><Introduction /></Affix>
+          <Affix offsetTop={60}>
+            <Introduction />
+          </Affix>
         </Col>
       </Row>
       <Footer />
     </div>
-)}
+  );
+};
 
-Home.getInitialProps = async(ctx) => {
-  const res = ctx.query.tags ?
-    await axios.get(api_url + `/list/${ctx.query.tags}`) :
-    await axios.get(api_url)
+Home.getInitialProps = async ctx => {
+  const res = ctx.query.tags
+    ? await axios.get(api_url + `/list/${ctx.query.tags}`)
+    : await axios.get(api_url);
   console.log({ data: res.data, ctx: ctx.query.tags });
-  
-  return { data: res.data, ctx: ctx.query.tags }
-}
 
-export default Home
+  return { data: res.data, ctx: ctx.query.tags };
+};
+
+export default Home;

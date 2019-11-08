@@ -1,10 +1,9 @@
-import {IconFont} from '../pages/index'
-import '../static/components/postTag.css'
+import { IconFont } from '../pages/index';
 
 const PostTag = () => {
   return (
     <div className='main'>
-      <div className='guzhang' >
+      <div className='guzhang'>
         <IconFont type='icon-guzhang' />
       </div>
       点个赞~
@@ -25,7 +24,7 @@ const PostTag = () => {
       </div>
       这也有~
     </div>
-  )
-}
+  );
+};
 
-export default PostTag
+export default PostTag;
