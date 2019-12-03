@@ -5,6 +5,10 @@
   font-weight: 500;
 }
 
+.post-content:hover {
+  cursor: pointer;
+}
+
 .ant-list-vertical .ant-list-item-extra {
   /* 图片 */
   margin: 0 1rem !important;

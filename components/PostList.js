@@ -1,9 +1,15 @@
-import { Row, Col, Affix, List, Icon, Avatar } from 'antd';
-import React, { useState, useContext } from 'react';
-import { PostsContext } from '../pages/index';
-import '../static/postCom/postList.css';
-import { IconFont } from '../pages/index';
-import Router from 'next/router';
+/*
+ * @Date: 2019-10-20 07:17:57
+ * @LastEditors: Asen Wang
+ * @LastEditTime: 2019-12-03 22:01:51
+ * @content: I
+ */
+import { Row, Col, Affix, List, Icon, Avatar } from "antd";
+import React, { useState, useContext } from "react";
+import { PostsContext } from "../pages/index";
+import "../static/postCom/postList.css";
+import { IconFont } from "../pages/index";
+import Router from "next/router";
 
 const PostList = () => {
   const data = useContext(PostsContext);
@@ -17,13 +23,13 @@ const PostList = () => {
 
   return (
     <List
-      itemLayout='vertical'
-      size='large'
+      itemLayout="vertical"
+      size="large"
       pagination={{
         onChange: page => {
           console.log(page);
         },
-        pageSize: 3
+        pageSize: 5
       }}
       dataSource={data}
       renderItem={item => (
@@ -31,36 +37,37 @@ const PostList = () => {
           key={item.title}
           actions={[
             <IconText
-              type='icon-liulanzuji'
+              type="icon-liulanzuji"
               text={item.views}
-              key='list-vertical-liulanzuji'
+              key="list-vertical-liulanzuji"
             />,
             <IconText
-              type='icon-guzhang'
+              type="icon-guzhang"
               text={item.zan}
-              key='list-vertical-bixin'
+              key="list-vertical-bixin"
             />,
             <IconText
-              type='icon-wo-'
+              type="icon-wo-"
               text={item.comment}
-              key='list-vertical-wo-'
+              key="list-vertical-wo-"
             />
           ]}
-          extra={<img alt='无所谓' src={item.img} />}
+          extra={<img alt="无所谓" src={item.img} />}
           onClick={() => {
-            Router.push({ pathname: '/posts', query: { id: item._id } });
-          }}>
+            Router.push({ pathname: "/posts", query: { id: item._id } });
+          }}
+        >
           <List.Item.Meta
             avatar={<Avatar src={item.author} />}
             title={item.title}
             description={item.time
-              .concat('   |   ')
+              .concat("   |   ")
               .concat(item.readtime)
-              .concat('min 可以读完')}
+              .concat("min 可以读完")}
           />
           {/* 这里在MongoDB后台使用了new Date().toLocaleDateString()生成年月日，这里应该还可以加上标签，待定 */}
 
-          <div className='post-content'>{item.intro}</div>
+          <div className="post-content">{item.intro}</div>
         </List.Item>
       )}
     />
