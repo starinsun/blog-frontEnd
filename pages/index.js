@@ -18,10 +18,10 @@ import MyTag from '../components/Tag';
 
 import { inconf_url, api_url } from '../utils/config';
 
-import '../static/pages/all.css';
-import '../static/components/postTag.css';
-import '../static/components/post.css';
-import '../static/components/postnavbar.css';
+import '../static/postCom/index.css';
+import '../static/postCom/postTag.css';
+import '../static/postCom/post.css';
+import '../static/postCom/postnavbar.css';
 
 export const IconFont = Icon.createFromIconfontCN({
   scriptUrl: inconf_url

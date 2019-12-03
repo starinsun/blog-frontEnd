@@ -1,4 +1,4 @@
-import '../static/components/footer.css'
+import '../static/postCom/footer.css';
 
 const Footer = () => (
   <div className='footer'>
@@ -6,6 +6,6 @@ const Footer = () => (
     <div>ESWang</div>
     <div>阿里云， 山东</div>
   </div>
-)
+);
 
-export default Footer
+export default Footer;

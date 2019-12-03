@@ -7,7 +7,7 @@
 
 .ant-list-vertical .ant-list-item-extra {
   /* 图片 */
-  margin: 0 1rem;
+  margin: 0 1rem !important;
 }
 
 img {
@@ -21,18 +21,17 @@ IconText {
 
 .ant-list-item-action>li {
   /* 图标间 */
-  margin: 0 0 0 3rem;
-  font-size: 1.1rem;
+  margin: 0 0 0 3rem !important;
+  font-size: 1.1rem !important;
 }
 
 .ant-list-item-action-split {
   /* 图标间的小短线 */
-  display: none;
+  display: none !important;
 }
 
 .ant-list-vertical .ant-list-item-meta-title {
   /* 题目 */
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 1.2rem;
-  font-weight: bolder;
+  font-size: 1.2rem !important;
+  font-weight: bolder !important;
 }

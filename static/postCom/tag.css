@@ -3,17 +3,13 @@
   margin-top: 1.4rem;
 }
 
-.react,
-.vue,
-.nest,
-.angular,
-.life {
+.block div {
   padding-bottom: 1rem;
 }
 
-.ant-tag {
+.block div p {
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.9rem;
   margin-right: 0;
   margin-bottom: .3rem;
