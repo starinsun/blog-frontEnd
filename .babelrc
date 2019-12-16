@@ -7,7 +7,7 @@
         "libraryName": "antd"
         // "style":"css"
       }
-    ],
-    "styled-jsx/babel"
+    ]
+    // "styled-jsx/babel"
   ]
 }
