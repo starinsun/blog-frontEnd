@@ -1,11 +1,10 @@
 /*
  * @Date: 2019-10-22 05:21:43
  * @LastEditors: Asen Wang
- * @LastEditTime: 2019-12-03 19:53:20
+ * @LastEditTime: 2019-12-13 19:21:20
  * @content: I
  */
 import NavBar from "markdown-navbar";
-import "markdown-navbar/dist/navbar.css";
 import { IconFont } from "../pages";
 import React, { useContext } from "react";
 import { PostContext } from "../pages/posts";

@@ -7,7 +7,6 @@
 import { Row, Col, Affix, List, Icon, Avatar } from "antd";
 import React, { useState, useContext } from "react";
 import { PostsContext } from "../pages/index";
-import "../static/postCom/postList.css";
 import { IconFont } from "../pages/index";
 import Router from "next/router";
 
