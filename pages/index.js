@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-18 15:41:11
  * @LastEditors: Asen Wang
- * @LastEditTime: 2019-12-13 19:25:35
+ * @LastEditTime: 2019-12-17 16:15:59
  * @content: I
  */
 import React, { useState, useEffect, createContext } from "react";
@@ -18,12 +18,7 @@ import MyTag from "../components/Tag";
 
 import { inconf_url, api_url } from "../utils/config";
 
-import "../static/postCom/index.css";
-import "../static/postCom/postTag.css";
-import "../static/postCom/post.css";
-import "../static/postCom/postnavbar.css";
 import "markdown-navbar/dist/navbar.css";
-import "../static/postCom/postList.css";
 
 export const IconFont = Icon.createFromIconfontCN({
   scriptUrl: inconf_url
@@ -68,6 +63,23 @@ const Home = ({ data, ctx }) => {
         </Col>
       </Row>
       <Footer />
+      <style jsx global>
+        {`
+          body {
+            background-color: #f6f6f6;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui,
+              Roboto, Helvetica, Arial, sans-serif, apple color emoji,
+              segoe ui emoji, segoe ui symbol;
+          }
+          .all-center {
+            background-color: #fff;
+            margin: 1.2rem 1.8rem;
+            padding: 0.8rem !important;
+            border-radius: 0.3rem;
+            border: 0.1rem solid #000;
+          }
+        `}
+      </style>
     </div>
   );
 };

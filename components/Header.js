@@ -1,11 +1,10 @@
 /*
  * @Date: 2019-10-18 21:41:11
  * @LastEditors: Asen Wang
- * @LastEditTime: 2019-12-17 00:51:34
+ * @LastEditTime: 2019-12-17 12:23:57
  * @content: I
  */
 import React, { useState } from "react";
-import "../static/postCom/header.css";
 import { Row, Col, Menu, Icon } from "antd";
 import { IconFont } from "../pages/index";
 import Link from "next/link";

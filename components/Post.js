@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-21 23:25:19
  * @LastEditors: Asen Wang
- * @LastEditTime: 2019-12-03 21:51:15
+ * @LastEditTime: 2019-12-17 16:32:28
  * @content: I
  */
 import { Tag, Divider } from "antd";
@@ -26,20 +26,77 @@ const Post = () => {
           <span className="post-time">
             {markdown.time + "  |  " + markdown.readtime + "min可读完"}
           </span>
-          <span className="post-tag">
+          <div className="post-tag">
             <IconFont type="icon-biaoqiansuoyin" className="icon" />:
             {markdown.tags.map(tag => (
-              <Tag color={judge_tag_color(tag)} key={tag}>
+              <Tag
+                color={judge_tag_color(tag)}
+                key={tag}
+                style={{
+                  fontSize: "1.5rem",
+                  marginLeft: ".3rem",
+                  height: "2rem"
+                }}
+              >
                 {tag}
               </Tag>
             ))}
-          </span>
+          </div>
         </div>
       </div>
       <Divider></Divider>
       <div className="post-contents">
         <Markdown source={markdown.content} escapeHtml={false} />
       </div>
+      <style jsx>
+        {`
+          .post-titles {
+            padding: 1rem;
+          }
+
+          .post-title {
+            text-align: left;
+            font-size: 2rem;
+            font-weight: 600;
+          }
+
+          .post-intro {
+            margin-top: 0.8rem;
+            text-align: left;
+            font-size: 1.2rem;
+            font-weight: 500;
+            font-style: italic;
+          }
+
+          .post-date {
+            margin: 0.5rem 0 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+
+          .post-tag {
+            font-size: 2rem;
+          }
+
+          .icon {
+            font-size: 2rem;
+          }
+
+          .post-img img {
+            width: 100%;
+            margin-bottom: 0;
+          }
+
+          .post-contents {
+            padding: 0 1rem;
+          }
+
+          .post-time {
+            font-size: 1.1rem;
+          }
+        `}
+      </style>
     </>
   );
 };
