@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-20 07:17:57
  * @LastEditors: Asen Wang
- * @LastEditTime: 2019-12-17 16:08:15
+ * @LastEditTime: 2019-12-17 21:29:14
  * @content: I
  */
 import { Row, Col, Affix, List, Icon, Avatar } from "antd";
@@ -79,12 +79,20 @@ const PostList = () => {
           </List.Item>
         )}
       />
+
       <style jsx>
         {`
           .post-content {
             color: #555;
             margin: 0 1rem 0 3rem;
             font-weight: 500;
+          }
+          .post-content :hover {
+            cursor: pointer;
+          }
+          p :hover {
+            color: #abc;
+            cursor: pointer;
           }
         `}
       </style>
