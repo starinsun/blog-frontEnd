@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Header2 from "../components/Header2";
 import Head from "next/head";
 
 const Life = () => {
@@ -8,7 +8,7 @@ const Life = () => {
         <title>Life</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Header />
+      <Header2 />
       <h1>Life</h1>
     </>
   );

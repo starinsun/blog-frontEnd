@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-18 15:41:11
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-13 10:02:06
+ * @LastEditTime : 2020-01-13 14:48:13
  * @content: I
  */
 import React, { useState, useEffect, createContext } from "react";
@@ -9,7 +9,7 @@ import Head from "next/head";
 import { Row, Col, Affix, Icon } from "antd";
 import axios from "axios";
 
-import Header from "../components/Header";
+import Header2 from "../components/Header2";
 import Footer from "../components/Footer";
 import PostList from "../components/PostList";
 import Introduction from "../components/Introduction";
@@ -35,14 +35,14 @@ const Home = ({ data, ctx }) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Affix>
-        <Header />
+        <Header2 />
       </Affix>
       {ctx ? (
         <TagContext.Provider value={ctx}>
           <HeadTag />
         </TagContext.Provider>
       ) : (
-        <div></div>
+        <></>
       )}
 
       <Row className='all-main' type='flex' justify='center'>
@@ -51,7 +51,20 @@ const Home = ({ data, ctx }) => {
             <MyTag />
           </Affix>
         </Col>
-        <Col className='all-center' xs={24} sm={24} md={12} lg={13} xl={13}>
+        <Col
+          xs={24}
+          sm={24}
+          md={12}
+          lg={13}
+          xl={13}
+          style={{
+            backgroundColor: "#fff",
+            margin: "1.3rem",
+            padding: "0.8rem",
+            borderRadius: "0.3rem",
+            border: "0.1rem solid #000"
+          }}
+        >
           <PostsContext.Provider value={data}>
             <PostList />
           </PostsContext.Provider>
@@ -70,13 +83,6 @@ const Home = ({ data, ctx }) => {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui,
               Roboto, Helvetica, Arial, sans-serif, apple color emoji,
               segoe ui emoji, segoe ui symbol;
-          }
-          .all-center {
-            background-color: #fff;
-            margin: 1.2rem 1.8rem;
-            padding: 0.8rem !important;
-            border-radius: 0.3rem;
-            border: 0.1rem solid #000;
           }
         `}
       </style>

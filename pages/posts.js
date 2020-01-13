@@ -6,7 +6,7 @@
  */
 import React, { createContext, memo } from "react";
 import Head from "next/head";
-import Header from "../components/Header";
+import Header2 from "../components/Header2";
 import { Row, Col, Affix } from "antd";
 import PostTag from "../components/PostTag";
 import Post from "../components/Post";
@@ -26,7 +26,7 @@ const Posts = res => (
       <link rel='icon' href='/favicon.ico' />
     </Head>
     <Affix offsetTop={0}>
-      <Header />
+      <Header2 />
     </Affix>
     <Row className='all-main' type='flex' justify='center'>
       <Col xs={0} sm={0} md={2} lg={2} xl={2}>

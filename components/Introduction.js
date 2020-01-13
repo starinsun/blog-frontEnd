@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-21 03:52:15
- * @LastEditors: Asen Wang
- * @LastEditTime: 2019-12-17 16:10:00
+ * @LastEditors  : Asen Wang
+ * @LastEditTime : 2020-01-13 12:39:34
  * @content: 关于iconfont里面的样式，通常做直接修改
  */
 import React, { memo } from "react";
@@ -25,7 +25,6 @@ const Introduction = () => {
       <div className='iconfont'>
         <IconFont
           type='icon-github'
-          className='github-icon'
           style={{ fontSize: "2rem", margin: "0 .4rem" }}
           onClick={() => {
             window.location.href = "https://github.com/starinsun";
@@ -33,21 +32,25 @@ const Introduction = () => {
         ></IconFont>
         <IconFont
           type='icon-csdn'
-          className='csdn-icon'
           style={{ fontSize: "2rem", margin: "0 .4rem" }}
           onClick={() => {
             window.location.href = "https://blog.csdn.net/weixin_43870742";
           }}
         ></IconFont>
         <IconFont
-          type='icon-ziyuan'
-          className='zhihu-icon'
+          type='icon-jianshu'
           style={{ fontSize: "2rem", margin: "0 .4rem" }}
+          onClick={() => {
+            window.location.href = "https://www.jianshu.com/u/3d27a986167e";
+          }}
         ></IconFont>
         <IconFont
           type='icon-juejin'
-          className='juejin-icon'
           style={{ fontSize: "2rem", margin: "0 .4rem .8rem .4rem" }}
+          onClick={() => {
+            window.location.href =
+              "https://juejin.im/user/5d3654a16fb9a07ea33c550e";
+          }}
         ></IconFont>
       </div>
       <style jsx>
