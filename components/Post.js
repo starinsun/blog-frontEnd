@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-21 23:25:19
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2019-12-19 19:39:28
+ * @LastEditTime : 2020-01-13 09:48:17
  * @content: I
  */
 import { Tag, Divider } from "antd";
@@ -10,7 +10,7 @@ import marked from "marked";
 import hljs from "highlight.js";
 import "highlight.js/styles/monokai-sublime.css";
 import { PostContext } from "../pages/posts";
-import React, { useContext } from "react";
+import React, { useContext, memo } from "react";
 import { judge_tag_color } from "../utils/tagColor";
 
 const Post = () => {
@@ -33,18 +33,18 @@ const Post = () => {
 
   return (
     <>
-      <div className="post-img">
+      <div className='post-img'>
         <img alt={markdown.title} src={markdown.img} />
       </div>
-      <div className="post-titles">
-        <div className="post-title">{markdown.title}</div>
-        <div className="post-intro">{markdown.intro}</div>
-        <div className="post-date">
-          <span className="post-time">
+      <div className='post-titles'>
+        <div className='post-title'>{markdown.title}</div>
+        <div className='post-intro'>{markdown.intro}</div>
+        <div className='post-date'>
+          <span className='post-time'>
             {markdown.time + "  |  " + markdown.readtime + "min可读完"}
           </span>
-          <div className="post-tag">
-            <IconFont type="icon-biaoqiansuoyin" className="icon" />:
+          <div className='post-tag'>
+            <IconFont type='icon-biaoqiansuoyin' className='icon' />:
             {markdown.tags.map(tag => (
               <Tag
                 color={judge_tag_color(tag)}
@@ -63,7 +63,7 @@ const Post = () => {
       </div>
       <Divider></Divider>
       <div
-        className="post-contents"
+        className='post-contents'
         dangerouslySetInnerHTML={{ __html: marked_content }}
       ></div>
       <style jsx>
@@ -153,4 +153,4 @@ const Post = () => {
   );
 };
 
-export default Post;
+export default memo(Post);

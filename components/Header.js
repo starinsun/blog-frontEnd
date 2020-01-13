@@ -4,7 +4,7 @@
  * @LastEditTime: 2019-12-17 12:23:57
  * @content: I
  */
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import { Row, Col, Menu, Icon } from "antd";
 import { IconFont } from "../pages/index";
 import Link from "next/link";
@@ -13,40 +13,40 @@ import Router from "next/router";
 const Header = () => {
   const [ckey, setCkey] = useState("code");
   return (
-    <div className="header">
-      <Row type="flex" justify="center">
+    <div className='header'>
+      <Row type='flex' justify='center'>
         <Col xs={24} sm={24} md={10} lg={10} xl={10}>
-          <span className="headerLogo">
-            <Link href="/">
+          <span className='headerLogo'>
+            <Link href='/'>
               <a>BLOG</a>
             </Link>
           </span>
-          <span className="headertxt">ESWang</span>
+          <span className='headertxt'>ESWang</span>
         </Col>
         <Col xs={0} sm={0} md={14} lg={8} xl={6}>
-          <Menu mode="horizontal" defaultSelectedKeys={["code"]}>
-            <Menu.Item key="search">
-              <IconFont type="icon-search-1" style={{ fontSize: 24 }} />
+          <Menu mode='horizontal' defaultSelectedKeys={["code"]}>
+            <Menu.Item key='search'>
+              <IconFont type='icon-search-1' style={{ fontSize: 24 }} />
               SEARCH
             </Menu.Item>
 
             <Menu.Item
-              key="code"
+              key='code'
               onClick={() => {
                 Router.push("/");
               }}
             >
-              <IconFont type="icon-github" style={{ fontSize: 24 }} />
+              <IconFont type='icon-github' style={{ fontSize: 24 }} />
               CODE
             </Menu.Item>
 
             <Menu.Item
-              key="ins"
+              key='ins'
               onClick={() => {
                 return Router.push("/life");
               }}
             >
-              <IconFont type="icon-ins" style={{ fontSize: 24 }} />
+              <IconFont type='icon-ins' style={{ fontSize: 24 }} />
               LIFE
             </Menu.Item>
           </Menu>
@@ -85,4 +85,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

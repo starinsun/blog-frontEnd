@@ -4,8 +4,10 @@
  * @LastEditTime: 2019-12-16 23:30:41
  * @content: I
  */
+import React, { memo } from "react";
+
 const Footer = () => (
-  <div className="footer">
+  <div className='footer'>
     <div>Power By ReactHooks, Antd, Next.js, MongoDb, Nest.js</div>
     <span>ESWang</span>
     <span>阿里云 山东</span>
@@ -27,4 +29,4 @@ const Footer = () => (
   </div>
 );
 
-export default Footer;
+export default memo(Footer);

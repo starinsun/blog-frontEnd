@@ -4,7 +4,7 @@
  * @LastEditTime: 2019-12-17 15:54:25
  * @content: I
  */
-import React, { createContext } from "react";
+import React, { createContext, memo } from "react";
 import Head from "next/head";
 import Header from "../components/Header";
 import { Row, Col, Affix } from "antd";
@@ -23,25 +23,25 @@ const Posts = res => (
   <div>
     <Head>
       <title>POSTS</title>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel='icon' href='/favicon.ico' />
     </Head>
     <Affix offsetTop={0}>
       <Header />
     </Affix>
-    <Row className="all-main" type="flex" justify="center">
+    <Row className='all-main' type='flex' justify='center'>
       <Col xs={0} sm={0} md={2} lg={2} xl={2}>
         <Affix offsetTop={60}>
           <PostTag />
         </Affix>
       </Col>
 
-      <Col className="post-center" xs={24} sm={24} md={12} lg={13} xl={13}>
+      <Col className='post-center' xs={24} sm={24} md={12} lg={13} xl={13}>
         <PostContext.Provider value={res}>
           <Post />
         </PostContext.Provider>
       </Col>
 
-      <Col className="post-right" xs={0} sm={0} md={5} lg={4} xl={5}>
+      <Col className='post-right' xs={0} sm={0} md={5} lg={4} xl={5}>
         <Introduction />
         <Affix offsetTop={60}>
           <PostContext.Provider value={res}>

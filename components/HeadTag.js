@@ -4,16 +4,16 @@
  * @LastEditTime: 2019-12-17 12:38:37
  * @content: 这个好像无关紧要啊
  */
-import React, { useContext } from "react";
+import React, { useContext, memo } from "react";
 import { TagContext } from "../pages/index";
 import { techSymbol } from "../utils/tech_symbol";
 
 const HeadTag = () => {
   const ctx = useContext(TagContext);
   return (
-    <div className="headTag">
-      <img src={techSymbol(ctx)} alt={ctx} className="headTag_img" />
-      <p className="headTag_font">{ctx.toUpperCase()}</p>
+    <div className='headTag'>
+      <img src={techSymbol(ctx)} alt={ctx} className='headTag_img' />
+      <p className='headTag_font'>{ctx.toUpperCase()}</p>
       <style jsx>
         {`
           .headTag {
@@ -43,4 +43,4 @@ const HeadTag = () => {
   );
 };
 
-export default HeadTag;
+export default memo(HeadTag);

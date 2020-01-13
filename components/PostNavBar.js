@@ -1,28 +1,28 @@
 /*
  * @Date: 2019-10-22 05:21:43
- * @LastEditors: Asen Wang
- * @LastEditTime: 2019-12-17 16:35:07
+ * @LastEditors  : Asen Wang
+ * @LastEditTime : 2020-01-13 09:49:07
  * @content: I
  */
 import NavBar from "markdown-navbar";
 import { IconFont } from "../pages";
-import React, { useContext } from "react";
+import React, { useContext, memo } from "react";
 import { PostContext } from "../pages/posts";
 
 const PostNavBar = () => {
   const markdown = useContext(PostContext);
   return (
-    <div className="navbar-main">
-      <div className="navbar-tilte">
+    <div className='navbar-main'>
+      <div className='navbar-tilte'>
         <IconFont
-          type="icon-mulu"
-          className="mulu"
+          type='icon-mulu'
+          className='mulu'
           style={{ fontSize: "1.8rem", marginRight: ".5rem" }}
         />
-        <div className="mulu">目录</div>
+        <div className='mulu'>目录</div>
       </div>
       <NavBar
-        className="navbar"
+        className='navbar'
         source={markdown.content}
         ordered={false}
         headingTopOffset={50}
@@ -59,4 +59,4 @@ const PostNavBar = () => {
   );
 };
 
-export default PostNavBar;
+export default memo(PostNavBar);

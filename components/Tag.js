@@ -1,17 +1,18 @@
 /*
  * @Date: 2019-10-21 06:33:01
- * @LastEditors: Asen Wang
- * @LastEditTime: 2019-12-17 13:26:49
+ * @LastEditors  : Asen Wang
+ * @LastEditTime : 2020-01-13 09:49:57
  * @content: I
  */
+import React, { memo } from "react";
 import { Tag } from "antd";
 import { IconFont } from "../pages";
 import { judge_tag_color } from "../utils/tagColor";
 import Router from "next/router";
 
 const MyTag = () => (
-  <div className="block">
-    <IconFont type="icon-biaoqiansuoyin" style={{ fontSize: "3rem" }} />
+  <div className='block'>
+    <IconFont type='icon-biaoqiansuoyin' style={{ fontSize: "3rem" }} />
     <br />
     <div>
       <Tag
@@ -111,4 +112,4 @@ const MyTag = () => (
   </div>
 );
 
-export default MyTag;
+export default memo(MyTag);

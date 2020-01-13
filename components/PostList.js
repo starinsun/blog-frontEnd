@@ -1,11 +1,11 @@
 /*
  * @Date: 2019-10-20 07:17:57
- * @LastEditors: Asen Wang
- * @LastEditTime: 2019-12-17 21:29:14
+ * @LastEditors  : Asen Wang
+ * @LastEditTime : 2020-01-13 09:48:50
  * @content: I
  */
 import { Row, Col, Affix, List, Icon, Avatar } from "antd";
-import React, { useState, useContext } from "react";
+import React, { useContext, memo } from "react";
 import { PostsContext } from "../pages/index";
 import { IconFont } from "../pages/index";
 import Router from "next/router";
@@ -26,8 +26,8 @@ const PostList = () => {
   return (
     <>
       <List
-        itemLayout="vertical"
-        size="large"
+        itemLayout='vertical'
+        size='large'
         pagination={{
           pageSize: 5
         }}
@@ -37,24 +37,24 @@ const PostList = () => {
             key={item.title}
             actions={[
               <IconText
-                type="icon-liulanzuji"
+                type='icon-liulanzuji'
                 text={item.views}
-                key="list-vertical-liulanzuji"
+                key='list-vertical-liulanzuji'
               />,
               <IconText
-                type="icon-guzhang"
+                type='icon-guzhang'
                 text={item.zan}
-                key="list-vertical-bixin"
+                key='list-vertical-bixin'
               />,
               <IconText
-                type="icon-wo-"
+                type='icon-wo-'
                 text={item.comment}
-                key="list-vertical-wo-"
+                key='list-vertical-wo-'
               />
             ]}
             extra={
               <img
-                alt="无所谓"
+                alt='无所谓'
                 src={item.img}
                 style={{
                   width: "16rem"
@@ -75,7 +75,7 @@ const PostList = () => {
               description={`${item.time} | ${item.readtime}min 可以读完`}
             />
             {/* 这里在MongoDB后台使用了new Date().toLocaleDateString()生成年月日，这里应该还可以加上标签，待定 */}
-            <div className="post-content">{item.intro}</div>
+            <div className='post-content'>{item.intro}</div>
           </List.Item>
         )}
       />
@@ -100,4 +100,4 @@ const PostList = () => {
   );
 };
 
-export default PostList;
+export default memo(PostList);

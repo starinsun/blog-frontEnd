@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-18 15:41:11
- * @LastEditors: Asen Wang
- * @LastEditTime: 2019-12-17 16:15:59
+ * @LastEditors  : Asen Wang
+ * @LastEditTime : 2020-01-13 10:02:06
  * @content: I
  */
 import React, { useState, useEffect, createContext } from "react";
@@ -32,7 +32,7 @@ const Home = ({ data, ctx }) => {
     <div>
       <Head>
         <title>Home</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <Affix>
         <Header />
@@ -45,18 +45,18 @@ const Home = ({ data, ctx }) => {
         <div></div>
       )}
 
-      <Row className="all-main" type="flex" justify="center">
-        <Col className="left" xs={0} sm={0} md={2} lg={2.5} xl={2.5}>
+      <Row className='all-main' type='flex' justify='center'>
+        <Col className='left' xs={0} sm={0} md={2} lg={2.5} xl={2.5}>
           <Affix offsetTop={60}>
             <MyTag />
           </Affix>
         </Col>
-        <Col className="all-center" xs={24} sm={24} md={12} lg={13} xl={13}>
+        <Col className='all-center' xs={24} sm={24} md={12} lg={13} xl={13}>
           <PostsContext.Provider value={data}>
             <PostList />
           </PostsContext.Provider>
         </Col>
-        <Col xs={0} sm={0} md={5} lg={4} xl={5} className="right">
+        <Col xs={0} sm={0} md={5} lg={4} xl={5} className='right'>
           <Affix offsetTop={60}>
             <Introduction />
           </Affix>

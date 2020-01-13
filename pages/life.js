@@ -1,5 +1,5 @@
-import Header from '../components/Header'
-import Head from 'next/head'
+import Header from "../components/Header";
+import Head from "next/head";
 
 const Life = () => {
   return (
@@ -11,7 +11,7 @@ const Life = () => {
       <Header />
       <h1>Life</h1>
     </>
-  )
-}
+  );
+};
 
-export default Life
+export default Life;
