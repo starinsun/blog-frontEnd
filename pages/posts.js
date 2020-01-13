@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-20 00:06:46
- * @LastEditors: Asen Wang
- * @LastEditTime: 2019-12-17 15:54:25
+ * @LastEditors  : Asen Wang
+ * @LastEditTime : 2020-01-13 22:38:58
  * @content: I
  */
 import React, { createContext, memo } from "react";
@@ -12,6 +12,7 @@ import PostTag from "../components/PostTag";
 import Post from "../components/Post";
 import Introduction from "../components/Introduction";
 import PostNavBar from "../components/PostNavBar";
+import Comment from "../components/Comment";
 import Footer from "../components/Footer";
 import axios from "axios";
 
@@ -39,6 +40,7 @@ const Posts = res => (
         <PostContext.Provider value={res}>
           <Post />
         </PostContext.Provider>
+        <Comment data={res} />
       </Col>
 
       <Col className='post-right' xs={0} sm={0} md={5} lg={4} xl={5}>
