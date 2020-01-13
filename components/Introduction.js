@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-21 03:52:15
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-13 12:39:34
+ * @LastEditTime : 2020-01-13 23:00:41
  * @content: 关于iconfont里面的样式，通常做直接修改
  */
 import React, { memo } from "react";
@@ -14,7 +14,7 @@ const Introduction = () => {
       <div className='avatar'>
         <Avatar
           size={100}
-          src='https://raw.githubusercontent.com/starinsun/picgo/master/avatar.png'
+          src='http://eswang.gitee.io/blog_pic/image/avartar.png'
         />
       </div>
       <div className='author'>

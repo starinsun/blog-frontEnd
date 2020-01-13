@@ -1,26 +1,26 @@
 /*
  * @Date: 2019-11-01 08:19:21
- * @LastEditors: Asen Wang
- * @LastEditTime: 2019-12-03 22:04:15
+ * @LastEditors  : Asen Wang
+ * @LastEditTime : 2020-01-13 23:10:32
  * @content: I
  */
 export const techSymbol = ctx => {
   switch (ctx) {
     case "react":
-      return "https://res.cloudinary.com/practicaldev/image/fetch/c_scale,fl_progressive,q_auto,w_180/f_auto/https://thepracticaldev.s3.amazonaws.com/uploads/badge/badge_image/26/react-sticker.png";
+      return "http://eswang.gitee.io/blog_pic/image/react.png";
     case "vue":
-      return "https://res.cloudinary.com/practicaldev/image/fetch/c_scale,fl_progressive,q_auto,w_180/f_auto/https://thepracticaldev.s3.amazonaws.com/uploads/badge/badge_image/27/vue-sticker.png";
+      return "http://eswang.gitee.io/blog_pic/image/vue.png";
     case "css":
-      return "https://res.cloudinary.com/practicaldev/image/fetch/c_scale,fl_progressive,q_auto,w_180/f_auto/https://thepracticaldev.s3.amazonaws.com/uploads/badge/badge_image/18/57795357-be29b880-7713-11e9-9748-b08c782b58d7.png";
+      return "http://eswang.gitee.io/blog_pic/image/css.png";
     case "angular":
-      return "https://res.cloudinary.com/practicaldev/image/fetch/c_scale,fl_progressive,q_auto,w_180/f_auto/https://thepracticaldev.s3.amazonaws.com/uploads/badge/badge_image/28/angular-sticker.png";
+      return "http://eswang.gitee.io/blog_pic/image/angular.png";
     case "nest":
-      return "https://docs.nestjs.com/assets/logo-small.svg";
+      return "http://eswang.gitee.io/blog_pic/image/nest.svg";
     case "life":
-      return "https://res.cloudinary.com/practicaldev/image/fetch/c_scale,fl_progressive,q_auto,w_180/f_auto/https://thepracticaldev.s3.amazonaws.com/uploads/badge/badge_image/29/graphql-sticker.png";
+      return "http://eswang.gitee.io/blog_pic/image/life.png";
     case "rn":
-      return "https://reactnative.cn/img/header_logo.svg";
+      return "http://eswang.gitee.io/blog_pic/image/react.png";
     default:
-      return "https://res.cloudinary.com/practicaldev/image/fetch/c_scale,fl_progressive,q_auto,w_180/f_auto/https://thepracticaldev.s3.amazonaws.com/uploads/badge/badge_image/23/node-sticker.png";
+      return "http://eswang.gitee.io/blog_pic/image/js.png";
   }
 };

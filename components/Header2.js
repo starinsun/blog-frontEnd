@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-01-13 13:10:50
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-13 15:03:35
+ * @LastEditTime : 2020-01-13 22:49:02
  * @content: I
  */
 import React from "react";
@@ -26,32 +26,28 @@ const Header2 = () => {
       <div className='header_Option'>
         <Button
           size='large'
-          style={{ marginTop: ".3rem", marginLeft: ".5rem" }}
+          style={{ marginTop: ".3rem" }}
           onClick={() => {
             Router.push("/");
           }}
         >
           <IconFont type='icon-shou' style={{ fontSize: 28 }} />
-          CODE
+          POSTS
           <IconFont type='icon-daohang' style={{ fontSize: 24 }} />
         </Button>
         <Button
           size='large'
-          style={{ marginTop: ".3rem", marginLeft: ".5rem" }}
+          style={{ marginTop: ".3rem", marginLeft: "1rem" }}
           onClick={() => {
             Router.push("/life");
           }}
         >
           <IconFont type='icon-shou' style={{ fontSize: 28 }} />
-          LIFE
+          LIVES
           <IconFont type='icon-ins' style={{ fontSize: 24 }} />
         </Button>
-        <Button
-          size='large'
-          style={{ marginTop: ".3rem", marginLeft: ".5rem" }}
-        >
-          <IconFont type='icon-shou' style={{ fontSize: 28 }} />
-          Other
+        <Button size='large' style={{ marginTop: ".3rem", marginLeft: "1rem" }}>
+          <IconFont type='icon-shou' style={{ fontSize: 28 }} />~
         </Button>
       </div>
       <style jsx>
