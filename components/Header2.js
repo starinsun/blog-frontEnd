@@ -1,13 +1,11 @@
 /*
  * @Date: 2020-01-13 13:10:50
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-13 22:49:02
+ * @LastEditTime : 2020-01-15 15:23:21
  * @content: I
  */
 import React from "react";
-import Router from "next/router";
 import Link from "next/link";
-import { Button } from "antd";
 import { IconFont } from "../pages/index";
 
 const Header2 = () => {
@@ -24,31 +22,25 @@ const Header2 = () => {
         </div>
       </div>
       <div className='header_Option'>
-        <Button
-          size='large'
-          style={{ marginTop: ".3rem" }}
-          onClick={() => {
-            Router.push("/");
-          }}
-        >
-          <IconFont type='icon-shou' style={{ fontSize: 28 }} />
-          POSTS
-          <IconFont type='icon-daohang' style={{ fontSize: 24 }} />
-        </Button>
-        <Button
-          size='large'
-          style={{ marginTop: ".3rem", marginLeft: "1rem" }}
-          onClick={() => {
-            Router.push("/life");
-          }}
-        >
-          <IconFont type='icon-shou' style={{ fontSize: 28 }} />
-          LIVES
-          <IconFont type='icon-ins' style={{ fontSize: 24 }} />
-        </Button>
-        <Button size='large' style={{ marginTop: ".3rem", marginLeft: "1rem" }}>
+        <Link href='/'>
+          <div className='header_blog'>
+            <IconFont type='icon-shou' style={{ fontSize: 28 }} />
+            POSTS
+            <IconFont type='icon-daohang' style={{ fontSize: 24 }} />
+          </div>
+        </Link>
+
+        <Link href='/life'>
+          <div className='header_life'>
+            <IconFont type='icon-shou' style={{ fontSize: 28 }} />
+            LIVES
+            <IconFont type='icon-ins' style={{ fontSize: 24 }} />
+          </div>
+        </Link>
+
+        <div className='header_other'>
           <IconFont type='icon-shou' style={{ fontSize: 28 }} />~
-        </Button>
+        </div>
       </div>
       <style jsx>
         {`
@@ -86,6 +78,30 @@ const Header2 = () => {
           .header_Option {
             display: flex;
           }
+
+          .header_blog,
+          .header_life {
+            margin-top: 0.5rem;
+            padding: 0 1.2rem 0 1.2rem;
+            transition: transform 200ms;
+          }
+          .header_other {
+            margin-top: 0.5rem;
+            padding-left: 1.2rem;
+          }
+
+          .header_blog :hover {
+            transform: scale(1.1);
+            cursor: pointer;
+          }
+          .header_life :hover {
+            transform: scale(1.1);
+            cursor: pointer;
+          }
+          .header_other :hover {
+            cursor: not-allowed;
+          }
+
           @media (max-width: 768px) {
             .header {
               justify-content: space-between;

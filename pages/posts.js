@@ -32,7 +32,7 @@ const Posts = res => (
     <Row className='all-main' type='flex' justify='center'>
       <Col xs={0} sm={0} md={2} lg={2} xl={2}>
         <Affix offsetTop={60}>
-          <PostTag />
+          <PostTag data={res} />
         </Affix>
       </Col>
 

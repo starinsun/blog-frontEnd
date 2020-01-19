@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-18 15:41:11
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-13 14:48:13
+ * @LastEditTime : 2020-01-15 16:02:24
  * @content: I
  */
 import React, { useState, useEffect, createContext } from "react";
@@ -94,7 +94,6 @@ Home.getInitialProps = async ctx => {
   const res = ctx.query.tags
     ? await axios.get(api_url + `/list/${ctx.query.tags}`)
     : await axios.get(api_url);
-  console.log({ data: res.data, ctx: ctx.query.tags });
 
   return { data: res.data, ctx: ctx.query.tags };
 };

@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-20 07:17:57
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-13 09:48:50
+ * @LastEditTime : 2020-01-15 14:53:05
  * @content: I
  */
 import { Row, Col, Affix, List, Icon, Avatar } from "antd";
@@ -46,11 +46,7 @@ const PostList = () => {
                 text={item.zan}
                 key='list-vertical-bixin'
               />,
-              <IconText
-                type='icon-wo-'
-                text={item.comment}
-                key='list-vertical-wo-'
-              />
+              <IconText type='icon-wo-' key='list-vertical-wo-' />
             ]}
             extra={
               <img
@@ -89,6 +85,9 @@ const PostList = () => {
           }
           .post-content :hover {
             cursor: pointer;
+          }
+          p {
+            transition: color 100ms;
           }
           p :hover {
             color: #abc;

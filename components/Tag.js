@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-21 06:33:01
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-13 09:49:57
+ * @LastEditTime : 2020-01-15 14:46:47
  * @content: I
  */
 import React, { memo } from "react";
@@ -93,7 +93,6 @@ const MyTag = () => (
 
         .block div {
           padding-top: 1rem;
-          transition: all 0.5s;
         }
 
         .block div p :hover {
@@ -106,6 +105,7 @@ const MyTag = () => (
           font-weight: 700;
           line-height: 2rem;
           margin: 0 0.3rem;
+          transition: all 200ms;
         }
       `}
     </style>
