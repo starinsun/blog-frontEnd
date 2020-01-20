@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-11-01 01:52:49
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-19 17:43:02
+ * @LastEditTime : 2020-01-20 20:10:25
  * @content: I
  */
 import Header2 from "../components/Header2";
@@ -9,6 +9,7 @@ import Head from "next/head";
 import { Card } from "antd";
 import Footer from "../components/Footer";
 import Axios from "axios";
+import { api_url } from "../utils/config";
 
 const Life = props => {
   const { Meta } = Card;
@@ -56,7 +57,7 @@ const Life = props => {
 };
 
 Life.getInitialProps = async () => {
-  let res = await Axios.get("http://localhost:4000/lives");
+  let res = await Axios.get(`${api_url}/lives`);
   return { data: res.data };
 };
 

@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-21 23:25:19
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-20 14:48:14
+ * @LastEditTime : 2020-01-20 20:14:34
  * @content: I
  */
 import { Tag, Divider } from "antd";
@@ -119,7 +119,7 @@ const Post = () => {
         {`
           pre {
             display: block;
-            background-color: #5b5b5b;
+            background-color: #c1c1c1;
             padding: 0.5rem;
             overflow-y: auto;
             font-weight: 300;
@@ -127,7 +127,7 @@ const Post = () => {
           }
           code {
             display: inline-block;
-            background-color: #5b5b5b;
+            background-color: #c1c1c1;
             font-size: 0.9rem;
             padding-left: 0.2rem;
             padding-right: 0.2rem;

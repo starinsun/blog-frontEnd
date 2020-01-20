@@ -71,7 +71,7 @@ const Posts = res => (
 );
 
 Posts.getInitialProps = async ctx => {
-  const res = await axios.get(api_url + `/post/${ctx.query.id}`);
+  const res = await axios.get(api_url + `/posts/post/${ctx.query.id}`);
   return res.data;
 };
 

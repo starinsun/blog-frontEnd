@@ -92,8 +92,8 @@ const Home = ({ data, ctx }) => {
 
 Home.getInitialProps = async ctx => {
   const res = ctx.query.tags
-    ? await axios.get(api_url + `/list/${ctx.query.tags}`)
-    : await axios.get(api_url);
+    ? await axios.get(api_url + `/posts/list/${ctx.query.tags}`)
+    : await axios.get(`${api_url}/posts`);
 
   return { data: res.data, ctx: ctx.query.tags };
 };

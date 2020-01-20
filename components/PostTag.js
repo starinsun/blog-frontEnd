@@ -45,7 +45,7 @@ const PostTag = props => {
         csdn,
         juejin
       };
-      await axios.put(`${api_url}/post/${props.data._id}`, req);
+      await axios.put(`${api_url}/posts/post/${props.data._id}`, req);
       setUp(true);
     } else {
       message.error("已经点赞了，不用再点了");
