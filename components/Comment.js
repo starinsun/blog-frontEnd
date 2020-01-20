@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-01-13 20:35:02
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-13 22:40:18
+ * @LastEditTime : 2020-01-20 10:50:37
  * @content: I
  */
 import React, { useEffect } from "react";
@@ -20,7 +20,6 @@ const Comment = props => {
       distractionFreeMode: false
     });
     gitalk.render("gitalk-container");
-    console.log(props.data._id);
   }, [props.data._id]);
   return <div id='gitalk-container'></div>;
 };

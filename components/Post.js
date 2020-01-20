@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-21 23:25:19
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-13 09:48:17
+ * @LastEditTime : 2020-01-20 14:48:14
  * @content: I
  */
 import { Tag, Divider } from "antd";
@@ -107,7 +107,7 @@ const Post = () => {
           }
 
           .post-contents {
-            padding: 0 1rem;
+            padding: 0 0.6rem;
           }
 
           .post-time {
@@ -119,20 +119,19 @@ const Post = () => {
         {`
           pre {
             display: block;
-            background-color: #f3f3f3;
+            background-color: #5b5b5b;
             padding: 0.5rem;
             overflow-y: auto;
             font-weight: 300;
-            border-radius: 0.3rem;
+            border-radius: 0.5rem;
           }
           code {
             display: inline-block;
-            background-color: #f3f3f3;
-            border-radius: 3px;
-            font-size: 0.8rem;
+            background-color: #5b5b5b;
+            font-size: 0.9rem;
             padding-left: 0.2rem;
             padding-right: 0.2rem;
-            color: #4f4f4f;
+            color: #000;
             margin: 0 0.1rem;
           }
           p img {
@@ -140,12 +139,23 @@ const Post = () => {
             width: 40rem;
             margin: 1rem;
           }
-          .post-contents h2 {
+          .post-contents > h2 {
             font-size: 2rem;
             font-weight: 600;
+            padding-bottom: 8px;
+            border-bottom: solid 1px #ddd;
+          }
+          .post-contents > h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            padding-bottom: 8px;
+            border-bottom: solid 1px #ddd;
           }
           .post-contents p {
             font-size: 1rem;
+          }
+          .post-contents ol li {
+            margin-top: 5px;
           }
         `}
       </style>

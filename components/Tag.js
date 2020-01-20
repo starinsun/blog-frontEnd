@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-21 06:33:01
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-15 14:46:47
+ * @LastEditTime : 2020-01-20 11:42:37
  * @content: I
  */
 import React, { memo } from "react";
@@ -71,7 +71,7 @@ const MyTag = () => (
           Router.push({ pathname: "/", query: { tags: "rn" } });
         }}
       >
-        <p>RN</p>
+        <p>RN/Taro</p>
       </Tag>
     </div>
     <div>
@@ -81,7 +81,7 @@ const MyTag = () => (
           Router.push({ pathname: "/", query: { tags: "css" } });
         }}
       >
-        <p>CSS</p>
+        <p>Basic</p>
       </Tag>
     </div>
     <style jsx>

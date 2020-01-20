@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-22 05:21:43
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-13 09:49:07
+ * @LastEditTime : 2020-01-20 13:26:07
  * @content: I
  */
 import NavBar from "markdown-navbar";
@@ -52,6 +52,13 @@ const PostNavBar = () => {
           .mulu {
             font-size: 1.3rem;
             font-weight: 600;
+          }
+        `}
+      </style>
+      <style jsx global>
+        {`
+          .markdown-navigation .title-anchor {
+            margin: 0.4rem 0;
           }
         `}
       </style>

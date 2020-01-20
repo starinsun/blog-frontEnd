@@ -1,16 +1,18 @@
 /*
  * @Date: 2019-10-21 05:44:15
- * @LastEditors: Asen Wang
- * @LastEditTime: 2019-12-16 23:30:41
+ * @LastEditors  : Asen Wang
+ * @LastEditTime : 2020-01-20 10:36:57
  * @content: I
  */
 import React, { memo } from "react";
 
 const Footer = () => (
   <div className='footer'>
-    <div>Power By ReactHooks, Antd, Next.js, MongoDb, Nest.js</div>
+    <div>
+      Power By ReactHooks, Antd, Next.js, MongoDb, Nest.js, React-Router
+    </div>
     <span>ESWang</span>
-    <span>阿里云 山东</span>
+    <span>阿里云</span>
     <style jsx>
       {`
         .footer {

@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-20 07:17:57
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-15 14:53:05
+ * @LastEditTime : 2020-01-20 11:13:58
  * @content: I
  */
 import { Row, Col, Affix, List, Icon, Avatar } from "antd";
@@ -29,7 +29,7 @@ const PostList = () => {
         itemLayout='vertical'
         size='large'
         pagination={{
-          pageSize: 5
+          pageSize: 10
         }}
         dataSource={data}
         renderItem={item => (
@@ -70,7 +70,6 @@ const PostList = () => {
               }
               description={`${item.time} | ${item.readtime}min 可以读完`}
             />
-            {/* 这里在MongoDB后台使用了new Date().toLocaleDateString()生成年月日，这里应该还可以加上标签，待定 */}
             <div className='post-content'>{item.intro}</div>
           </List.Item>
         )}
