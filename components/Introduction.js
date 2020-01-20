@@ -14,7 +14,7 @@ const Introduction = () => {
       <div className='avatar'>
         <Avatar
           size={100}
-          src='http://eswang.gitee.io/blog_pic/image/avartar.png'
+          src='https://eswang.gitee.io/blog_pic/image/avartar.png'
         />
       </div>
       <div className='author'>
