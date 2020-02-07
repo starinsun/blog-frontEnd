@@ -4,7 +4,7 @@
  * @LastEditTime : 2020-01-20 11:13:58
  * @content: I
  */
-import { Row, Col, Affix, List, Icon, Avatar } from "antd";
+import { List, Avatar } from "antd";
 import React, { useContext, memo } from "react";
 import { PostsContext } from "../pages/index";
 import { IconFont } from "../pages/index";
@@ -17,11 +17,16 @@ const PostList = () => {
     <span>
       <IconFont
         type={type}
-        style={{ margin: "0 .5rem 0 3rem", fontSize: "1.2rem" }}
+        style={{ margin: "0 .7rem 0 .7rem", fontSize: "1.3rem" }}
       />
       {text}
     </span>
   );
+
+  function goDetail(id) {
+    Router.push({ pathname: "/posts", query: { id: id } });
+    window.scrollTo({ top: 0 });
+  }
 
   return (
     <>
@@ -29,6 +34,9 @@ const PostList = () => {
         itemLayout='vertical'
         size='large'
         pagination={{
+          onChange: () => {
+            window.scrollTo({ top: 0 });
+          },
           pageSize: 10
         }}
         dataSource={data}
@@ -37,40 +45,51 @@ const PostList = () => {
             key={item.title}
             actions={[
               <IconText
-                type='icon-liulanzuji'
-                text={item.views}
-                key='list-vertical-liulanzuji'
+                type='icon-xingxing'
+                text={item.tags[0]}
+                key={`list-vertical-tag${item._id}`}
               />,
               <IconText
                 type='icon-guzhang'
                 text={item.zan}
-                key='list-vertical-bixin'
+                key={`list-vertical-zan${item._id}`}
               />,
-              <IconText type='icon-wo-' key='list-vertical-wo-' />
+              <IconText type='icon-wo-' key={`list-vertical-wo${item._id}`} />
             ]}
             extra={
               <img
                 alt='无所谓'
                 src={item.img}
                 style={{
-                  width: "16rem"
+                  width: "17rem"
                 }}
               />
             }
-            onClick={() => {
-              Router.push({ pathname: "/posts", query: { id: item._id } });
-            }}
           >
             <List.Item.Meta
-              avatar={<Avatar src={item.author} />}
+              avatar={
+                <Avatar src={item.author} style={{ marginTop: "0.2rem" }} />
+              }
               title={
-                <p style={{ fontSize: "1.3rem", fontWeight: 600 }}>
+                <p
+                  style={{ fontSize: "1.3rem", fontWeight: 600 }}
+                  onClick={() => {
+                    goDetail(item._id);
+                  }}
+                >
                   {item.title}
                 </p>
               }
               description={`${item.time} | ${item.readtime}min 可以读完`}
             />
-            <div className='post-content'>{item.intro}</div>
+            <div
+              className='post-content'
+              onClick={() => {
+                goDetail(item._id);
+              }}
+            >
+              {item.intro}
+            </div>
           </List.Item>
         )}
       />
@@ -78,15 +97,12 @@ const PostList = () => {
       <style jsx>
         {`
           .post-content {
-            color: #555;
-            margin: 0 1rem 0 3rem;
+            margin: 0 0.7rem 0 0.7rem;
             font-weight: 500;
           }
           .post-content :hover {
             cursor: pointer;
-          }
-          p {
-            transition: color 100ms;
+            color: #aaa;
           }
           p :hover {
             color: #abc;

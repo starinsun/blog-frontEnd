@@ -18,6 +18,7 @@ const MyTag = () => (
       <Tag
         color={judge_tag_color("react")}
         onClick={() => {
+          window.scrollTo({ top: 0 });
           Router.push({ pathname: "/", query: { tags: "react" } });
         }}
       >
@@ -28,6 +29,7 @@ const MyTag = () => (
       <Tag
         color={judge_tag_color("vue")}
         onClick={() => {
+          window.scrollTo({ top: 0 });
           Router.push({ pathname: "/", query: { tags: "vue" } });
         }}
       >
@@ -38,6 +40,7 @@ const MyTag = () => (
       <Tag
         color={judge_tag_color("nest")}
         onClick={() => {
+          window.scrollTo({ top: 0 });
           Router.push({ pathname: "/", query: { tags: "nest" } });
         }}
       >
@@ -48,6 +51,7 @@ const MyTag = () => (
       <Tag
         color={judge_tag_color("angular")}
         onClick={() => {
+          window.scrollTo({ top: 0 });
           Router.push({ pathname: "/", query: { tags: "angular" } });
         }}
       >
@@ -58,6 +62,7 @@ const MyTag = () => (
       <Tag
         color={judge_tag_color("life")}
         onClick={() => {
+          window.scrollTo({ top: 0 });
           Router.push({ pathname: "/", query: { tags: "life" } });
         }}
       >
@@ -68,16 +73,18 @@ const MyTag = () => (
       <Tag
         color={judge_tag_color("rn")}
         onClick={() => {
+          window.scrollTo({ top: 0 });
           Router.push({ pathname: "/", query: { tags: "rn" } });
         }}
       >
-        <p>RN/Taro</p>
+        <p>Native</p>
       </Tag>
     </div>
     <div>
       <Tag
         color={judge_tag_color("css")}
         onClick={() => {
+          window.scrollTo({ top: 0 });
           Router.push({ pathname: "/", query: { tags: "css" } });
         }}
       >

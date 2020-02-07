@@ -149,13 +149,13 @@ const Post = () => {
             }
           }
           .post-contents > h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 600;
             padding-bottom: 8px;
             border-bottom: solid 1px #ddd;
           }
           .post-contents > h1 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 600;
             padding-bottom: 8px;
             border-bottom: solid 1px #ddd;
@@ -165,6 +165,7 @@ const Post = () => {
           }
           .post-contents ol li {
             margin-top: 5px;
+            line-height: 1.8;
           }
         `}
       </style>

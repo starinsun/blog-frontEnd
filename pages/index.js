@@ -80,9 +80,13 @@ const Home = ({ data, ctx }) => {
         {`
           body {
             background-color: #f6f6f6;
+            line-height: 1.6;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui,
               Roboto, Helvetica, Arial, sans-serif, apple color emoji,
               segoe ui emoji, segoe ui symbol;
+          }
+          html {
+            scroll-behavior: smooth;
           }
         `}
       </style>
