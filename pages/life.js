@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-11-01 01:52:49
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-20 20:10:25
+ * @LastEditTime : 2020-01-21 19:07:25
  * @content: I
  */
 import Header2 from "../components/Header2";
@@ -42,7 +42,7 @@ const Life = props => {
             justify-content: center;
             flex-wrap: wrap;
             background-color: #fff;
-            margin: 2rem 15rem;
+            margin: 2rem 10vw;
             border: 1px solid #333;
             border-radius: 0.8rem;
             padding: 2rem;

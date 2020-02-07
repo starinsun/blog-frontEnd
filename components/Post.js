@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-10-21 23:25:19
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-20 20:14:34
+ * @LastEditTime : 2020-01-21 19:27:10
  * @content: I
  */
 import { Tag, Divider } from "antd";
@@ -134,10 +134,19 @@ const Post = () => {
             color: #000;
             margin: 0 0.1rem;
           }
-          p img {
-            display: block;
-            width: 40rem;
-            margin: 1rem;
+          @media (max-width: 768px) {
+            p img {
+              display: block;
+              width: 80vw;
+              margin: 1rem;
+            }
+          }
+          @media (min-width: 768px) {
+            p img {
+              display: block;
+              width: 48vw;
+              margin: 1rem;
+            }
           }
           .post-contents > h2 {
             font-size: 2rem;

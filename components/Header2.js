@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-01-13 13:10:50
  * @LastEditors  : Asen Wang
- * @LastEditTime : 2020-01-15 15:23:21
+ * @LastEditTime : 2020-01-21 19:23:17
  * @content: I
  */
 import React from "react";
@@ -104,10 +104,15 @@ const Header2 = () => {
 
           @media (max-width: 768px) {
             .header {
+              display: flex;
               justify-content: space-between;
             }
-            .header_Option {
+            .header_txt,
+            .header_other {
               display: none;
+            }
+            .header_Option {
+              transform: scale(0.8);
             }
           }
           @media (min-width: 768px) {
