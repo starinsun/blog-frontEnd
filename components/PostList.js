@@ -13,12 +13,9 @@ import Router from "next/router";
 const PostList = () => {
   const data = useContext(PostsContext);
 
-  const IconText = ({ type, text }) => (
+  const IconText = ({ type, text, style }) => (
     <span>
-      <IconFont
-        type={type}
-        style={{ margin: "0 .7rem 0 .7rem", fontSize: "1.3rem" }}
-      />
+      <IconFont type={type} style={style} />
       {text}
     </span>
   );
@@ -48,28 +45,32 @@ const PostList = () => {
                 type='icon-xingxing'
                 text={item.tags[0]}
                 key={`list-vertical-tag${item._id}`}
+                style={{ margin: "0 .7rem 0 3rem", fontSize: "1.2rem" }}
               />,
               <IconText
                 type='icon-guzhang'
                 text={item.zan}
                 key={`list-vertical-zan${item._id}`}
+                style={{ margin: "0 .7rem 0 .7rem", fontSize: "1.2rem" }}
               />,
-              <IconText type='icon-wo-' key={`list-vertical-wo${item._id}`} />
+              <IconText
+                type='icon-wo-'
+                key={`list-vertical-wo${item._id}`}
+                style={{ margin: "0 .7rem 0 .7rem", fontSize: "1.2rem" }}
+              />
             ]}
             extra={
               <img
                 alt='无所谓'
                 src={item.img}
                 style={{
-                  width: "17rem"
+                  width: "16rem"
                 }}
               />
             }
           >
             <List.Item.Meta
-              avatar={
-                <Avatar src={item.author} style={{ marginTop: "0.2rem" }} />
-              }
+              avatar={<Avatar src={item.author} s />}
               title={
                 <p
                   style={{ fontSize: "1.3rem", fontWeight: 600 }}
@@ -97,7 +98,7 @@ const PostList = () => {
       <style jsx>
         {`
           .post-content {
-            margin: 0 0.7rem 0 0.7rem;
+            margin: 0 0.7rem 0 3rem;
             font-weight: 500;
           }
           .post-content :hover {
