@@ -1,5 +1,14 @@
-import App from 'next/app'
+import App from "next/app";
+import Router from "next/router";
+import NProgress from "nprogress";
 
-import 'antd/dist/antd.css'
+import "antd/dist/antd.css";
+import "../utils/np.css";
 
-export default App
+Router.onRouteChangeStart = url => {
+  NProgress.start();
+};
+Router.onRouteChangeComplete = () => NProgress.done();
+Router.onRouteChangeError = () => NProgress.done();
+
+export default App;

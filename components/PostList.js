@@ -8,10 +8,11 @@ import { List, Avatar } from "antd";
 import React, { useContext, memo } from "react";
 import { PostsContext } from "../pages/index";
 import { IconFont } from "../pages/index";
-import Router from "next/router";
+import { useRouter } from "next/router";
 
 const PostList = () => {
   const data = useContext(PostsContext);
+  const router = useRouter();
 
   const IconText = ({ type, text, style }) => (
     <span>
@@ -21,7 +22,11 @@ const PostList = () => {
   );
 
   function goDetail(id) {
-    Router.push({ pathname: "/posts", query: { id: id } });
+    console.log(1);
+    router.push({
+      pathname: "/posts",
+      query: { id: id }
+    });
     window.scrollTo({ top: 0 });
   }
 
@@ -67,8 +72,7 @@ const PostList = () => {
                   width: "16rem"
                 }}
               />
-            }
-          >
+            }>
             <List.Item.Meta
               avatar={<Avatar src={item.author} s />}
               title={
@@ -76,8 +80,7 @@ const PostList = () => {
                   style={{ fontSize: "1.3rem", fontWeight: 600 }}
                   onClick={() => {
                     goDetail(item._id);
-                  }}
-                >
+                  }}>
                   {item.title}
                 </p>
               }
@@ -87,8 +90,7 @@ const PostList = () => {
               className='post-content'
               onClick={() => {
                 goDetail(item._id);
-              }}
-            >
+              }}>
               {item.intro}
             </div>
           </List.Item>

@@ -4,11 +4,10 @@
  * @LastEditTime : 2020-01-15 16:02:24
  * @content: I
  */
-import React, { useState, useEffect, createContext } from "react";
+import React, { createContext } from "react";
 import Head from "next/head";
 import { Row, Col, Affix, Icon } from "antd";
 import axios from "axios";
-
 import Header2 from "../components/Header2";
 import Footer from "../components/Footer";
 import PostList from "../components/PostList";
@@ -23,7 +22,6 @@ import "markdown-navbar/dist/navbar.css";
 export const IconFont = Icon.createFromIconfontCN({
   scriptUrl: inconf_url
 });
-
 export const PostsContext = createContext({});
 export const TagContext = createContext("");
 
@@ -63,8 +61,7 @@ const Home = ({ data, ctx }) => {
             padding: "0.8rem",
             borderRadius: "0.3rem",
             border: "0.1rem solid #000"
-          }}
-        >
+          }}>
           <PostsContext.Provider value={data}>
             <PostList />
           </PostsContext.Provider>
