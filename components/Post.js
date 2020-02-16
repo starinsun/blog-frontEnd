@@ -44,17 +44,21 @@ const Post = () => {
             {markdown.time + "  |  " + markdown.readtime + "min可读完"}
           </span>
           <div className='post-tag'>
-            <IconFont type='icon-biaoqiansuoyin' className='icon' />:
+            <IconFont
+              type='icon-biaoqiansuoyin'
+              className='icon'
+              style={{ fontSize: 40, marginRight: 5 }}
+            />
+            :
             {markdown.tags.map(tag => (
               <Tag
                 color={judge_tag_color(tag)}
                 key={tag}
                 style={{
-                  fontSize: "1.5rem",
-                  marginLeft: ".3rem",
+                  fontSize: "1.8rem",
+                  marginLeft: ".7rem",
                   height: "2rem"
-                }}
-              >
+                }}>
                 {tag}
               </Tag>
             ))}
@@ -64,8 +68,7 @@ const Post = () => {
       <Divider></Divider>
       <div
         className='post-contents'
-        dangerouslySetInnerHTML={{ __html: marked_content }}
-      ></div>
+        dangerouslySetInnerHTML={{ __html: marked_content }}></div>
       <style jsx>
         {`
           .post-titles {
@@ -111,7 +114,8 @@ const Post = () => {
           }
 
           .post-time {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            color: #57606f;
           }
         `}
       </style>

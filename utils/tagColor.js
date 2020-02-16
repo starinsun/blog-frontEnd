@@ -6,20 +6,24 @@
  */
 export const judge_tag_color = text => {
   switch (text) {
+    case "react":
+      return "#3eeeee";
     case "vue":
       return "green";
-    case "react":
-      return "cyan";
+    case "ecmascript":
+      return "#eccc68";
+    case "css":
+      return "red";
+    case "basic":
+      return "#57606f";
     case "nest":
       return "volcano";
     case "angular":
-      return "magenta";
+      return "#ff4757";
+    case "native":
+      return "cyan";
     case "life":
-      return "#F3DB35";
-    case "rn":
-      return "#3eeeee";
-    case "css":
-      return "red";
+      return "#70a1ff";
     default:
       return "silver";
   }

@@ -44,7 +44,7 @@ const Home = ({ data, ctx }) => {
       )}
 
       <Row className='all-main' type='flex' justify='center'>
-        <Col className='left' xs={0} sm={0} md={2} lg={2.5} xl={2.5}>
+        <Col className='left' xs={0} sm={0} md={0} lg={3} xl={3}>
           <Affix offsetTop={60}>
             <MyTag />
           </Affix>
@@ -52,9 +52,9 @@ const Home = ({ data, ctx }) => {
         <Col
           xs={24}
           sm={24}
-          md={12}
-          lg={13}
-          xl={13}
+          md={24}
+          lg={14}
+          xl={14}
           style={{
             backgroundColor: "#fff",
             margin: "1.3rem",
@@ -66,7 +66,7 @@ const Home = ({ data, ctx }) => {
             <PostList />
           </PostsContext.Provider>
         </Col>
-        <Col xs={0} sm={0} md={5} lg={4} xl={5} className='right'>
+        <Col xs={0} sm={0} md={0} lg={5} xl={5} className='right'>
           <Affix offsetTop={60}>
             <Introduction />
           </Affix>

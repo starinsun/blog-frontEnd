@@ -20,8 +20,7 @@ const MyTag = () => (
         onClick={() => {
           window.scrollTo({ top: 0 });
           Router.push({ pathname: "/", query: { tags: "react" } });
-        }}
-      >
+        }}>
         <p>React.js</p>
       </Tag>
     </div>
@@ -31,53 +30,18 @@ const MyTag = () => (
         onClick={() => {
           window.scrollTo({ top: 0 });
           Router.push({ pathname: "/", query: { tags: "vue" } });
-        }}
-      >
+        }}>
         <p>Vue.js</p>
       </Tag>
     </div>
     <div>
       <Tag
-        color={judge_tag_color("nest")}
+        color={judge_tag_color("ecmascript")}
         onClick={() => {
           window.scrollTo({ top: 0 });
-          Router.push({ pathname: "/", query: { tags: "nest" } });
-        }}
-      >
-        <p>Nest.js</p>
-      </Tag>
-    </div>
-    <div>
-      <Tag
-        color={judge_tag_color("angular")}
-        onClick={() => {
-          window.scrollTo({ top: 0 });
-          Router.push({ pathname: "/", query: { tags: "angular" } });
-        }}
-      >
-        <p>Angular</p>
-      </Tag>
-    </div>
-    <div>
-      <Tag
-        color={judge_tag_color("life")}
-        onClick={() => {
-          window.scrollTo({ top: 0 });
-          Router.push({ pathname: "/", query: { tags: "life" } });
-        }}
-      >
-        <p>Life</p>
-      </Tag>
-    </div>
-    <div>
-      <Tag
-        color={judge_tag_color("rn")}
-        onClick={() => {
-          window.scrollTo({ top: 0 });
-          Router.push({ pathname: "/", query: { tags: "rn" } });
-        }}
-      >
-        <p>Native</p>
+          Router.push({ pathname: "/", query: { tags: "ecmascript" } });
+        }}>
+        <p>ECMAScript</p>
       </Tag>
     </div>
     <div>
@@ -86,9 +50,58 @@ const MyTag = () => (
         onClick={() => {
           window.scrollTo({ top: 0 });
           Router.push({ pathname: "/", query: { tags: "css" } });
-        }}
-      >
+        }}>
+        <p>CSS</p>
+      </Tag>
+    </div>
+    <div>
+      <Tag
+        color={judge_tag_color("basic")}
+        onClick={() => {
+          window.scrollTo({ top: 0 });
+          Router.push({ pathname: "/", query: { tags: "basic" } });
+        }}>
         <p>Basic</p>
+      </Tag>
+    </div>
+    <div>
+      <Tag
+        color={judge_tag_color("native")}
+        onClick={() => {
+          window.scrollTo({ top: 0 });
+          Router.push({ pathname: "/", query: { tags: "native" } });
+        }}>
+        <p>Native</p>
+      </Tag>
+    </div>
+    <div>
+      <Tag
+        color={judge_tag_color("angular")}
+        onClick={() => {
+          window.scrollTo({ top: 0 });
+          Router.push({ pathname: "/", query: { tags: "angular" } });
+        }}>
+        <p>Augular</p>
+      </Tag>
+    </div>
+    <div>
+      <Tag
+        color={judge_tag_color("nest")}
+        onClick={() => {
+          window.scrollTo({ top: 0 });
+          Router.push({ pathname: "/", query: { tags: "nest" } });
+        }}>
+        <p>Nest.js</p>
+      </Tag>
+    </div>
+    <div>
+      <Tag
+        color={judge_tag_color("life")}
+        onClick={() => {
+          window.scrollTo({ top: 0 });
+          Router.push({ pathname: "/", query: { tags: "life" } });
+        }}>
+        <p>Life</p>
       </Tag>
     </div>
     <style jsx>

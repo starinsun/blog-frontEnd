@@ -22,7 +22,6 @@ const PostList = () => {
   );
 
   function goDetail(id) {
-    console.log(1);
     router.push({
       pathname: "/posts",
       query: { id: id }
@@ -47,21 +46,21 @@ const PostList = () => {
             key={item.title}
             actions={[
               <IconText
-                type='icon-xingxing'
-                text={item.tags[0]}
-                key={`list-vertical-tag${item._id}`}
-                style={{ margin: "0 .7rem 0 3rem", fontSize: "1.2rem" }}
-              />,
-              <IconText
                 type='icon-guzhang'
                 text={item.zan}
                 key={`list-vertical-zan${item._id}`}
-                style={{ margin: "0 .7rem 0 .7rem", fontSize: "1.2rem" }}
+                style={{ margin: "0 .5rem 0 3rem", fontSize: "1.2rem" }}
               />,
               <IconText
                 type='icon-wo-'
                 key={`list-vertical-wo${item._id}`}
-                style={{ margin: "0 .7rem 0 .7rem", fontSize: "1.2rem" }}
+                style={{ margin: "0 .5rem 0 .5rem", fontSize: "1.2rem" }}
+              />,
+              <IconText
+                type='icon-xingxing'
+                text={item.tags[0]}
+                key={`list-vertical-tag${item._id}`}
+                style={{ margin: "0 .5rem 0 .5rem", fontSize: "1.2rem" }}
               />
             ]}
             extra={

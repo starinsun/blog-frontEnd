@@ -18,23 +18,31 @@ const Header2 = () => {
           </Link>
         </div>
         <div className='header_txt'>
-          <p>ESWang</p>
+          <p>e</p>
+          <p>s</p>
+          <p>w</p>
+          <p>a</p>
+          <p>ng</p>
         </div>
       </div>
       <div className='header_Option'>
         <Link href='/'>
           <div className='header_blog'>
-            <IconFont type='icon-shou' style={{ fontSize: 28 }} />
-            POSTS
-            <IconFont type='icon-daohang' style={{ fontSize: 24 }} />
+            <IconFont
+              type='icon-tubiaozhizuomoban-'
+              style={{ fontSize: 28, marginRight: 5 }}
+            />
+            Article
           </div>
         </Link>
 
         <Link href='/life'>
           <div className='header_life'>
-            <IconFont type='icon-shou' style={{ fontSize: 28 }} />
-            LIVES
-            <IconFont type='icon-ins' style={{ fontSize: 24 }} />
+            <IconFont
+              type='icon-ins'
+              style={{ fontSize: 28, marginRight: 5 }}
+            />
+            Photos
           </div>
         </Link>
 
@@ -68,12 +76,50 @@ const Header2 = () => {
             font-size: 1.8rem;
             font-weight: 500;
             color: #000;
-            display: inline-block;
-            padding-left: 0.8rem;
+            margin-bottom:5px;
+            display: flex;
+            align-items:flex-end;
+          }
+          .header_txt::before {
+            content:'';
+            width:0.5rem;
+            background-color:#fff
           }
           .header_txt p {
-            margin-top: 0.8rem;
-            margin-bottom: 0.1rem;
+            display:inline;
+            line-height:0.8;
+            text-align:center;
+            margin-bottom:0;
+            background-color:#fff;
+            border-radius:50%;
+            transition:1s;
+          }
+          .header_txt p:nth-of-type(1) {
+            width:35px;
+            height:35px;
+            font-size:35px;
+            background-color:#7bed9f;
+          }
+          .header_txt p:nth-of-type(3) {
+            width:28px;
+            height:28px;
+            background-color:#ffa502;
+          }
+          .header_txt:hover>p:nth-of-type(1){
+            animation: eswang 1s infinite linear
+          }
+          .header_txt:hover>p:nth-of-type(3){
+            animation: esang 1s infinite linear
+          }
+          @keyframes eswang {
+            to{
+              transform: rotate(360deg);
+            }
+          }
+          @keyframes esang {
+            to{
+              transform: rotate(-360deg);
+            }
           }
           .header_Option {
             display: flex;
@@ -123,6 +169,7 @@ const Header2 = () => {
               margin-left: 4rem;
             }
           }
+          header_txt
         `}
       </style>
     </div>

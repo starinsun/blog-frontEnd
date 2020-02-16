@@ -18,9 +18,11 @@ export const techSymbol = ctx => {
       return "https://eswang.gitee.io/blog_pic/image/nest.svg";
     case "life":
       return "https://eswang.gitee.io/blog_pic/image/life.png";
-    case "rn":
-      return "https://eswang.gitee.io/blog_pic/image/react.png";
-    default:
+    case "native":
+      return "https://eswang.gitee.io/blog_pic/image/flutter.png";
+    case "ecmascript":
       return "https://eswang.gitee.io/blog_pic/image/js.png";
+    case "basic":
+      return "https://eswang.gitee.io/blog_pic/image/node.png";
   }
 };
