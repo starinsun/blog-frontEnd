@@ -6,7 +6,6 @@
  */
 import React, { useEffect } from "react";
 import Gitalk from "gitalk";
-import "gitalk/dist/gitalk.css";
 
 const Comment = props => {
   useEffect(() => {

@@ -17,10 +17,8 @@ import MyTag from "../components/Tag";
 
 import { inconf_url, api_url } from "../utils/config";
 
-import "markdown-navbar/dist/navbar.css";
 import Router from "next/router";
 import NProgress from "nprogress";
-import "../utils/np.css";
 
 Router.onRouteChangeStart = url => {
   NProgress.start();

@@ -8,7 +8,6 @@ import { Tag, Divider } from "antd";
 import { IconFont } from "../pages";
 import marked from "marked";
 import hljs from "highlight.js";
-import "highlight.js/styles/monokai-sublime.css";
 import { PostContext } from "../pages/blogs/[pid]";
 import React, { useContext, memo } from "react";
 import { judge_tag_color } from "../utils/tagColor";
@@ -84,6 +83,7 @@ const Post = () => {
           .post-intro {
             margin-top: 0.8rem;
             text-align: left;
+            color: #636e72;
             font-size: 1.2rem;
             font-weight: 500;
             font-style: italic;
@@ -116,7 +116,7 @@ const Post = () => {
 
           .post-time {
             font-size: 1.2rem;
-            color: #57606f;
+            color: #000;
           }
         `}
       </style>
