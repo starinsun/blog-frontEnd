@@ -22,10 +22,13 @@ const PostList = () => {
   );
 
   function goDetail(id) {
-    router.push({
-      pathname: "/posts",
-      query: { id: id }
-    });
+    router.push(
+      {
+        pathname: "/blogs",
+        query: { id: id }
+      },
+      `blogs/${id}`
+    );
     window.scrollTo({ top: 0 });
   }
 

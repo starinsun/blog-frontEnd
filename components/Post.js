@@ -9,7 +9,7 @@ import { IconFont } from "../pages";
 import marked from "marked";
 import hljs from "highlight.js";
 import "highlight.js/styles/monokai-sublime.css";
-import { PostContext } from "../pages/posts";
+import { PostContext } from "../pages/blogs/[pid]";
 import React, { useContext, memo } from "react";
 import { judge_tag_color } from "../utils/tagColor";
 
@@ -47,17 +47,17 @@ const Post = () => {
             <IconFont
               type='icon-biaoqiansuoyin'
               className='icon'
-              style={{ fontSize: 40, marginRight: 5 }}
+              style={{ fontSize: 40, position: "absolute", left: -12 }}
             />
-            :
             {markdown.tags.map(tag => (
               <Tag
                 color={judge_tag_color(tag)}
                 key={tag}
                 style={{
-                  fontSize: "1.8rem",
+                  fontSize: "1.6rem",
                   marginLeft: ".7rem",
-                  height: "2rem"
+                  height: "2rem",
+                  lineHeight: 1
                 }}>
                 {tag}
               </Tag>
@@ -98,6 +98,7 @@ const Post = () => {
 
           .post-tag {
             font-size: 2rem;
+            position: relative;
           }
 
           .icon {

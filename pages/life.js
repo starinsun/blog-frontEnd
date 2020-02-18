@@ -17,7 +17,7 @@ const Life = props => {
   return (
     <>
       <Head>
-        <title>Life</title>
+        <title>eswang的个人网站</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header2 />
@@ -27,8 +27,7 @@ const Life = props => {
             <Card
               hoverable
               style={{ width: 240 }}
-              cover={<img alt={item.date} src={item.image} />}
-            >
+              cover={<img alt={item.date} src={item.image} />}>
               <Meta title={item.date} description={item.content} />
             </Card>
           </div>

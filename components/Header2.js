@@ -97,12 +97,14 @@ const Header2 = () => {
           .header_txt p:nth-of-type(1) {
             width:35px;
             height:35px;
-            font-size:35px;
+            font-size:36px;
             background-color:#7bed9f;
           }
           .header_txt p:nth-of-type(3) {
             width:28px;
             height:28px;
+            line-height: 1;
+            font-size:26px;
             background-color:#ffa502;
           }
           .header_txt:hover>p:nth-of-type(1){

@@ -7,7 +7,7 @@
 import NavBar from "markdown-navbar";
 import { IconFont } from "../pages";
 import React, { useContext, memo } from "react";
-import { PostContext } from "../pages/posts";
+import { PostContext } from "../pages/blogs/[pid]";
 
 const PostNavBar = () => {
   const markdown = useContext(PostContext);

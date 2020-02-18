@@ -18,6 +18,15 @@ import MyTag from "../components/Tag";
 import { inconf_url, api_url } from "../utils/config";
 
 import "markdown-navbar/dist/navbar.css";
+import Router from "next/router";
+import NProgress from "nprogress";
+import "../utils/np.css";
+
+Router.onRouteChangeStart = url => {
+  NProgress.start();
+};
+Router.onRouteChangeComplete = () => NProgress.done();
+Router.onRouteChangeError = () => NProgress.done();
 
 export const IconFont = Icon.createFromIconfontCN({
   scriptUrl: inconf_url
@@ -29,7 +38,7 @@ const Home = ({ data, ctx }) => {
   return (
     <div>
       <Head>
-        <title>Home</title>
+        <title>eswang的个人博客</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Affix>

@@ -9,7 +9,9 @@ import React, { memo } from "react";
 const Footer = () => (
   <div className='footer'>
     <div>
-      Power By ReactHooks, Antd, Next.js, MongoDb, Nest.js, React-Router
+      Power By ReactHooks, Antd, Next.js, MongoDb,{" "}
+      <a href='https://api.asenwang.top/'>Nest.js</a>,{" "}
+      <a href='https://admin.asenwang.top'>React-Router</a>
     </div>
     <span>ESWang</span>
     <span>阿里云</span>
@@ -25,6 +27,11 @@ const Footer = () => (
         }
         span {
           margin-left: 20px;
+        }
+        a {
+          text-decoration: none;
+          color: rgba(0, 0, 0, 0.65);
+          cursor: default;
         }
       `}
     </style>
