@@ -8,13 +8,15 @@ import React, { memo } from "react";
 
 const Footer = () => (
   <div className='footer'>
-    <div>
+    <div className='insi'>
       Power By ReactHooks, Antd, Next.js, MongoDb,{" "}
       <a href='https://api.asenwang.top/'>Nest.js</a>,{" "}
       <a href='https://admin.asenwang.top'>React-Router</a>
     </div>
     <span>ESWang</span>
-    <span>阿里云</span>
+    <a className='gx' href='http://www.beian.miit.gov.cn'>
+      鲁ICP备19044799号
+    </a>
     <style jsx>
       {`
         .footer {
@@ -26,12 +28,19 @@ const Footer = () => (
           font-style: italic;
         }
         span {
-          margin-left: 20px;
+          margin-right: 20px;
         }
-        a {
+        .insi a {
           text-decoration: none;
           color: rgba(0, 0, 0, 0.65);
           cursor: default;
+        }
+        .gx {
+          text-decoration: none;
+          color: rgba(0, 0, 0, 0.65);
+        }
+        .gx :hover {
+          color: blue;
         }
       `}
     </style>
