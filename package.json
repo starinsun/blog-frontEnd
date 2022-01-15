@@ -15,7 +15,7 @@
     "gitalk": "^1.5.0",
     "highlight.js": "^9.17.1",
     "markdown-navbar": "^1.0.7",
-    "marked": "^0.8.0",
+    "marked": "^4.0.10",
     "next": "^9.2.2",
     "nprogress": "^0.2.0",
     "react": "^16.12.0",
